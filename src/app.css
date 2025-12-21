@@ -1,0 +1,39 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import 'flowbite/dist/flowbite.min.css';
+@import '@fontsource-variable/bitter';
+
+:root {
+    --bg: rgb(242,242,242);
+    --main: rgb(37, 94, 68);
+}
+
+.bg {    
+    background-color: var(--bg);
+}
+
+.cm {
+    color: var(--main);
+}
+
+nav {
+    background-color: var(--bg);
+}
+
+.nav-li {
+    text-transform: uppercase;
+}
+
+.gray {
+    color: gray;
+}
+
+.contact-icon {
+    color: gray;
+}
+
+body {    
+    font-family: 'Bitter Variable', serif;
+    background-color:var(--bg);
+}
