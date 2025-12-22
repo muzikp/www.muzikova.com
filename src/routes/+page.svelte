@@ -374,7 +374,7 @@
         font-family: 'Libre Baskerville', serif;
         display: flex;
         flex-direction: column;
-        gap: 0.5rem;
+        gap: 1.2rem;
     }
     
     .hero-name {
