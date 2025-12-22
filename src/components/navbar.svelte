@@ -39,7 +39,6 @@
         <div class="nav-menu {mobileMenuOpen ? 'open' : ''}">
             <a href="#{m.navbar_about_ref()}" class="nav-link" on:click={closeMenu}>{m.navbar_about_title()}</a>
             <a href="#{m.navbar_services_ref()}" class="nav-link" on:click={closeMenu}>{m.navbar_services_title()}</a>
-            <a href="#{m.navbar_references_ref()}" class="nav-link" on:click={closeMenu}>{m.navbar_references_title()}</a>
             <a href="#{m.navbar_contact_ref()}" class="nav-link" on:click={closeMenu}>{m.navbar_contact_title()}</a>
             
             <div class="lang-switcher">

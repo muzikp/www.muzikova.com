@@ -49,7 +49,7 @@
         <div class="hero-image">
             <div class="profile-card">
                 <div class="profile-img-wrapper">
-                    <img src="/placeholder-lawyer.svg" alt={m.hero_name()} class="profile-img" />
+                    <img src="/images/Irena_24_02_25_033.jpg" alt={m.hero_name()} class="profile-img" />
                 </div>
                 <h3 class="profile-name">{m.hero_name()}</h3>
                 <p class="profile-role">{m.hero_role()}</p>
@@ -92,6 +92,10 @@
                     <li>{m.about_career_4()}</li>
                 </ul>
             </div>
+        </div>
+        
+        <div class="about-photo-section">
+            <img src="/images/Irena_24_02_25_113b.jpg" alt={m.sec_contact_name()} class="about-photo" />
         </div>
         
         <p class="about-description">{m.about_description()}</p>
@@ -168,38 +172,20 @@
     </div>
 </section>
 
-<!-- References Section -->
-<section id={m.navbar_references_ref()} class="references-section">
+<!-- Partners Section -->
+<section class="partners-section">
     <div class="container">
-        <h2 class="section-title">{m.sec_references_title()}</h2>
-        <p class="section-subtitle">{m.sec_references_subtitle()}</p>
+        <h2 class="section-title">{m.sec_partners_title()}</h2>
         
-        <div class="references-grid">
-            <div class="reference-card">
-                <div class="quote-icon">"</div>
-                <p class="reference-text">{m.ref_1_text()}</p>
-                <div class="reference-author">
-                    <p class="author-name">{m.ref_1_author()}</p>
-                    <p class="author-case">{m.ref_1_case()}</p>
-                </div>
+        <div class="partners-grid">
+            <div class="partner-card">
+                <h3 class="partner-name">{m.sec_partners_1_name()}</h3>
+                <p class="partner-role">{m.sec_partners_1_role()}</p>
             </div>
             
-            <div class="reference-card">
-                <div class="quote-icon">"</div>
-                <p class="reference-text">{m.ref_2_text()}</p>
-                <div class="reference-author">
-                    <p class="author-name">{m.ref_2_author()}</p>
-                    <p class="author-case">{m.ref_2_case()}</p>
-                </div>
-            </div>
-            
-            <div class="reference-card">
-                <div class="quote-icon">"</div>
-                <p class="reference-text">{m.ref_3_text()}</p>
-                <div class="reference-author">
-                    <p class="author-name">{m.ref_3_author()}</p>
-                    <p class="author-case">{m.ref_3_case()}</p>
-                </div>
+            <div class="partner-card">
+                <h3 class="partner-name">{m.sec_partners_2_name()}</h3>
+                <p class="partner-role">{m.sec_partners_2_role()}</p>
             </div>
         </div>
     </div>
@@ -348,7 +334,7 @@
     
     /* Hero Section */
     .hero-section {
-        background: linear-gradient(165deg, #2f4f4f 0%, #556b2f 50%, #2f4f4f 100%);
+        background: linear-gradient(165deg, #3a3a3a 0%, #4a4a4a 50%, #3a3a3a 100%);
         color: #ffffff;
         padding: 8rem 2rem 10rem;
         position: relative;
@@ -418,23 +404,23 @@
     }
     
     .profile-card {
-        background: rgba(255, 255, 255, 0.08);
-        backdrop-filter: blur(20px);
+        background: transparent;
+        backdrop-filter: none;
         border-radius: 0;
         padding: 3rem;
         text-align: center;
-        border: 1px solid rgba(255, 255, 255, 0.15);
-        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        border: none;
+        box-shadow: none;
     }
     
     .profile-img-wrapper {
-        width: 220px;
-        height: 220px;
+        width: 400px;
+        height: 500px;
         margin: 0 auto 2rem;
         border-radius: 0;
         overflow: hidden;
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+        border: none;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
     }
     
     .profile-img {
@@ -575,6 +561,19 @@
         border-radius: 50%;
     }
     
+    .about-photo-section {
+        max-width: 1000px;
+        margin: 3rem auto;
+        text-align: center;
+    }
+    
+    .about-photo {
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    }
+    
     .about-description {
         text-align: center;
         font-size: 1.15rem;
@@ -672,77 +671,50 @@
         opacity: 0.3;
     }
     
-    .references-section .section-title {
-        color: white;
-        position: relative;
-        z-index: 1;
+    /* Partners Section */
+    .partners-section {
+        padding: 8rem 2rem;
+        background: #f9f9f9;
     }
     
-    .references-section .section-subtitle {
-        color: rgba(255, 255, 255, 0.7);
-        position: relative;
-        z-index: 1;
-    }
-    
-    .references-grid {
+    .partners-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-        gap: 3rem;
-        position: relative;
-        z-index: 1;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 6rem;
+        max-width: 900px;
+        margin: 0 auto;
     }
     
-    .reference-card {
-        background: rgba(255, 255, 255, 0.08);
-        backdrop-filter: blur(20px);
-        border-radius: 0;
+    .partner-card {
+        background: white;
         padding: 3rem;
-        border: 1px solid rgba(255, 255, 255, 0.15);
-        transition: all 0.4s ease;
+        border-radius: 0;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        text-align: center;
+        transition: all 0.3s ease;
+        border-left: 4px solid #2f4f4f;
     }
     
-    .reference-card:hover {
-        transform: translateY(-8px);
-        background: rgba(255, 255, 255, 0.12);
-        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    .partner-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
     }
     
-    .quote-icon {
-        font-size: 5rem;
-        color: rgba(255, 255, 255, 0.2);
-        line-height: 1;
-        margin-bottom: 1.5rem;
-        font-family: 'Georgia', serif;
-    }
-    
-    .reference-text {
-        font-size: 1.05rem;
-        line-height: 1.8;
-        margin: 0 0 2rem 0;
-        font-style: italic;
-        font-family: 'Libre Baskerville', serif;
-        font-weight: 300;
-    }
-    
-    .reference-author {
-        border-top: 1px solid rgba(255, 255, 255, 0.2);
-        padding-top: 1.5rem;
-    }
-    
-    .author-name {
-        font-weight: 500;
+    .partner-name {
+        font-size: 1.5rem;
+        font-weight: 400;
         margin: 0 0 0.5rem 0;
-        font-family: 'Crimson Text', sans-serif;
-        letter-spacing: 0.3px;
+        color: #2f4f4f;
+        font-family: 'Libre Baskerville', serif;
     }
     
-    .author-case {
-        color: rgba(255, 255, 255, 0.6);
+    .partner-role {
+        color: #666;
+        font-size: 1rem;
         margin: 0;
-        font-size: 0.85rem;
-        text-transform: uppercase;
-        letter-spacing: 1px;
+        text-transform: lowercase;
         font-family: 'Crimson Text', sans-serif;
+        letter-spacing: 0.5px;
     }
     
     /* Contact Section */
