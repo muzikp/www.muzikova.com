@@ -1,6 +1,7 @@
 <script lang="ts">    
     import '../app.css';
-    import * as m from '$lib/paraglide/messages.js';    
+    import * as m from '$lib/paraglide/messages.js';
+    import { base } from '$app/paths';
     export const prerender = true;
     export const ssr = true;
     
@@ -49,7 +50,7 @@
         <div class="hero-image">
             <div class="profile-card">
                 <div class="profile-img-wrapper">
-                    <img src="/images/Irena_24_02_25_033.jpg" alt={m.hero_name()} class="profile-img" />
+                    <img src="{base}/images/Irena_24_02_25_033.jpg" alt={m.hero_name()} class="profile-img" />
                 </div>
                 <h3 class="profile-name">{m.hero_name()}</h3>
                 <p class="profile-role">{m.hero_role()}</p>
@@ -95,7 +96,7 @@
         </div>
         
         <div class="about-photo-section">
-            <img src="/images/Irena_24_02_25_113b.jpg" alt={m.sec_contact_name()} class="about-photo" />
+            <img src="{base}/images/Irena_24_02_25_113b.jpg" alt={m.sec_contact_name()} class="about-photo" />
         </div>
         
         <p class="about-description">{m.about_description()}</p>
