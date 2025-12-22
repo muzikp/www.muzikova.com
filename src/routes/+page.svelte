@@ -53,7 +53,7 @@
         <div class="hero-image">
             <div class="profile-card">
                 <div class="profile-img-wrapper">
-                    <img src="{base}/images/Irena_24_02_25_033.jpg" alt={m.hero_name()} class="profile-img" />
+                    <img src="{base}/images/Irena_24_02_25_033.jpg" alt="Irena Mužíková" class="profile-img" />
                 </div>
             </div>
         </div>
@@ -97,7 +97,7 @@
         </div>
         
         <div class="about-photo-section">
-            <img src="{base}/images/Irena_24_02_25_123b.jpg" alt={m.sec_contact_name()} class="about-photo" />
+            <img src="{base}/images/Irena_24_02_25_123b.jpg" alt="Irena Mužíková" class="about-photo" />
         </div>
         
         <p class="about-description">{m.about_description()}</p>
