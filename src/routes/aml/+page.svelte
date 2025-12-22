@@ -1,6 +1,7 @@
 <script lang="ts">
     import '../../app.css';
     import * as m from '$lib/paraglide/messages.js';
+    import { base } from '$app/paths';
     export const prerender = true;
     export const ssr = true;
 </script>
@@ -57,7 +58,7 @@
             <h2>{m.aml_gdpr_title()}</h2>
             <p>
                 {m.aml_gdpr_text_1()}
-                <a href="/gdpr" class="inline-link">{m.aml_gdpr_link()}</a>.
+                <a href="{base}/gdpr" class="inline-link">{m.aml_gdpr_link()}</a>.
             </p>
         </section>
 

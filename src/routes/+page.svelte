@@ -292,7 +292,7 @@
                         <input type="checkbox" id="consent" name="consent" required />
                         <label for="consent">
                             {m.sec_contact_form_consent_1()} 
-                            <a href="/{m.sec_contact_form_consent_link()}">{m.sec_contact_form_consent_2()}</a>
+                            <a href="{base}/{m.sec_contact_form_consent_link()}">{m.sec_contact_form_consent_2()}</a>
                         </label>
                     </div>
                     

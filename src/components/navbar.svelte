@@ -1,6 +1,7 @@
 <script lang="ts">
     import "../app.css";    
-    import type {AvailableLanguageTag} from '$lib/paraglide/runtime';    
+    import type {AvailableLanguageTag} from '$lib/paraglide/runtime';
+    import { base } from '$app/paths';
 	import { i18n } from '$lib/i18n';
 	import { page } from '$app/stores';
 	import { goto } from '$app/navigation';
@@ -25,7 +26,7 @@
 
 <nav class="navbar">
     <div class="nav-container">
-        <a href="/" class="nav-brand">
+        <a href="{base}/" class="nav-brand">
             <span class="brand-name">{m.brand_label()}</span>
             <span class="brand-subtitle">{m.brand_subtitle()}</span>
         </a>

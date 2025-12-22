@@ -1,5 +1,6 @@
 <script lang="ts">
     import * as m from '$lib/paraglide/messages.js';
+    import { base } from '$app/paths';
 </script>
 
 <footer class="footer">
@@ -34,11 +35,11 @@
         <div class="footer-bottom">
             <p>&copy; {new Date().getFullYear()} {m.brand_label()}. {m.footer_copyright()}</p>
             <div class="footer-legal-links">
-                <a href="/gdpr" class="footer-link">{m.footer_privacy()}</a>
+                <a href="{base}/gdpr" class="footer-link">{m.footer_privacy()}</a>
                 <span class="footer-divider">|</span>
-                <a href="/{m.navbar_aml_ref()}" class="footer-link">{m.footer_aml()}</a>
+                <a href="{base}/{m.navbar_aml_ref()}" class="footer-link">{m.footer_aml()}</a>
                 <span class="footer-divider">|</span>
-                <a href="/{m.navbar_cookies_ref()}" class="footer-link">{m.footer_cookies()}</a>
+                <a href="{base}/{m.navbar_cookies_ref()}" class="footer-link">{m.footer_cookies()}</a>
             </div>
         </div>
     </div>
