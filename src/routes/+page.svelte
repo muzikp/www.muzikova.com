@@ -374,6 +374,7 @@
         font-family: 'Libre Baskerville', serif;
         display: flex;
         flex-direction: column;
+        gap: 0.5rem;
     }
     
     .hero-name {
@@ -465,7 +466,7 @@
         font-size: 3rem;
         font-weight: 400;
         text-align: center;
-        margin: 0 0 0.75rem 0;
+        margin: 0 0 2.5rem 0;
         color: #2f4f4f;
         letter-spacing: -0.02em;
         font-family: 'Libre Baskerville', serif;
@@ -478,7 +479,7 @@
     .section-title::after {
         content: '';
         position: absolute;
-        bottom: -10px;
+        bottom: -20px;
         left: 50%;
         transform: translateX(-50%);
         width: 60px;
