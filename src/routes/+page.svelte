@@ -43,7 +43,10 @@
 <section class="hero-section">
     <div class="hero-content">
         <div class="hero-text">
-            <h1 class="hero-title">{m.hero_title()}</h1>
+            <h1 class="hero-title">
+                <span class="hero-name">{m.hero_name()}</span>
+                <span class="hero-role-text">{m.hero_role()}</span>
+            </h1>
             <p class="hero-subtitle">{m.hero_subtitle()}</p>
             <a href="#{m.navbar_contact_ref()}" class="cta-button">{m.hero_cta()}</a>
         </div>
@@ -369,6 +372,16 @@
         line-height: 1.2;
         letter-spacing: -0.02em;
         font-family: 'Libre Baskerville', serif;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .hero-name {
+        white-space: nowrap;
+    }
+    
+    .hero-role-text {
+        display: block;
     }
     
     .hero-subtitle {
@@ -912,6 +925,14 @@
         }
         
         .hero-title {
+            font-size: 2.5rem;
+        }
+        
+        .hero-name {
+            font-size: 2.5rem;
+        }
+        
+        .hero-role-text {
             font-size: 2.5rem;
         }
         
