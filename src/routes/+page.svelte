@@ -112,7 +112,6 @@
         
         <div class="services-grid">
             <div class="service-card">
-                <div class="service-icon">⚖️</div>
                 <h3 class="service-title">{m.sec_services_g1_title()}</h3>
                 <ul class="service-list">
                     {#each m.sec_services_g1_content().split(';').filter(item => item.trim()) as item}
@@ -122,7 +121,6 @@
             </div>
             
             <div class="service-card">
-                <div class="service-icon">🏠</div>
                 <h3 class="service-title">{m.sec_services_g2_title()}</h3>
                 <ul class="service-list">
                     {#each m.sec_services_g2_content().split(';').filter(item => item.trim()) as item}
@@ -132,7 +130,6 @@
             </div>
             
             <div class="service-card">
-                <div class="service-icon">💼</div>
                 <h3 class="service-title">{m.sec_services_g3_title()}</h3>
                 <ul class="service-list">
                     {#each m.sec_services_g3_content().split(';').filter(item => item.trim()) as item}
@@ -142,7 +139,6 @@
             </div>
             
             <div class="service-card">
-                <div class="service-icon">📊</div>
                 <h3 class="service-title">{m.sec_services_g4_title()}</h3>
                 <ul class="service-list">
                     {#each m.sec_services_g4_content().split(';').filter(item => item.trim()) as item}
@@ -152,7 +148,6 @@
             </div>
             
             <div class="service-card">
-                <div class="service-icon">👥</div>
                 <h3 class="service-title">{m.sec_services_g5_title()}</h3>
                 <ul class="service-list">
                     {#each m.sec_services_g5_content().split(';').filter(item => item.trim()) as item}
@@ -162,7 +157,6 @@
             </div>
             
             <div class="service-card">
-                <div class="service-icon">©️</div>
                 <h3 class="service-title">{m.sec_services_g6_title()}</h3>
                 <ul class="service-list">
                     {#each m.sec_services_g6_content().split(';').filter(item => item.trim()) as item}
