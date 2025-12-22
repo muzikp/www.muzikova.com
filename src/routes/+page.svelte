@@ -382,6 +382,8 @@
     
     .hero-role-text {
         display: block;
+        font-size: 0.6em;
+        font-weight: 300;
     }
     
     .hero-subtitle {

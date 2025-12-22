@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- Homepage CZ -->
+  <url>
+    <loc>https://www.muzikova.com/</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.muzikova.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.muzikova.com/en"/>
+  </url>
+  
+  <!-- Homepage EN -->
+  <url>
+    <loc>https://www.muzikova.com/en</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.muzikova.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.muzikova.com/en"/>
+  </url>
+  
+  <!-- GDPR CZ -->
+  <url>
+    <loc>https://www.muzikova.com/gdpr</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.muzikova.com/gdpr"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.muzikova.com/en/gdpr"/>
+  </url>
+  
+  <!-- GDPR EN -->
+  <url>
+    <loc>https://www.muzikova.com/en/gdpr</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.muzikova.com/gdpr"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.muzikova.com/en/gdpr"/>
+  </url>
+  
+  <!-- AML CZ -->
+  <url>
+    <loc>https://www.muzikova.com/aml</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.muzikova.com/aml"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.muzikova.com/en/aml"/>
+  </url>
+  
+  <!-- AML EN -->
+  <url>
+    <loc>https://www.muzikova.com/en/aml</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.muzikova.com/aml"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.muzikova.com/en/aml"/>
+  </url>
+  
+  <!-- Cookies CZ -->
+  <url>
+    <loc>https://www.muzikova.com/cookies</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.muzikova.com/cookies"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.muzikova.com/en/cookies"/>
+  </url>
+  
+  <!-- Cookies EN -->
+  <url>
+    <loc>https://www.muzikova.com/en/cookies</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.muzikova.com/cookies"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.muzikova.com/en/cookies"/>
+  </url>
+  
+</urlset>
