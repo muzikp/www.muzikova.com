@@ -967,15 +967,15 @@
         .about-content,
         .contact-content {
             grid-template-columns: 1fr;
-            gap: 2rem;
+            gap: 0;
         }
         
         .hero-section {
-            padding: 4rem 0 4rem;
+            padding: 4rem 0 0 0;
         }
         
         .hero-text {
-            padding: 0 1rem;
+            padding: 0 1rem 2rem 1rem;
         }
         
         .hero-title {
@@ -993,7 +993,7 @@
         .profile-img-wrapper {
             width: 100vw;
             height: 70vh;
-            margin: 2rem 0 0 0;
+            margin: 0;
             border-radius: 0;
             box-shadow: none;
         }
