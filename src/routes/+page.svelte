@@ -990,6 +990,10 @@
             font-size: 1.8rem;
         }
         
+        .profile-card {
+            padding: 0;
+        }
+        
         .profile-img-wrapper {
             width: 100vw;
             height: 70vh;
