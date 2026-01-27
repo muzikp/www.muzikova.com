@@ -42,6 +42,13 @@
                 <a href="{base}/{m.navbar_cookies_ref()}" class="footer-link">{m.footer_cookies()}</a>
             </div>
         </div>
+        
+        <div class="footer-credits">
+            <a href="https://www.evalytics.cz" target="_blank" rel="noopener noreferrer" class="evalytics-link">
+                <span>Web by</span>
+                <img src="{base}/images/logo-wt.svg.svg" alt="Evalytics" class="evalytics-logo" />
+            </a>
+        </div>
     </div>
 </footer>
 
@@ -203,6 +210,43 @@
     .footer-link:hover {
         color: white;
         border-bottom-color: rgba(255, 255, 255, 0.5);
+    }
+    
+    .footer-credits {
+        margin-top: 2rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .evalytics-link {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 0.75rem;
+        font-family: 'Crimson Text', sans-serif;
+        transition: all 0.3s ease;
+        opacity: 0.8;
+    }
+    
+    .evalytics-link:hover {
+        opacity: 1;
+        color: rgba(255, 255, 255, 0.9);
+    }
+    
+    .evalytics-logo {
+        height: 12px;
+        width: auto;
+        opacity: 0.9;
+        transition: opacity 0.3s ease;
+    }
+    
+    .evalytics-link:hover .evalytics-logo {
+        opacity: 1;
     }
     
     @media (max-width: 768px) {

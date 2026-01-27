@@ -1,0 +1,26 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Deploy to GitHub Pages",
+            "type": "node-terminal",
+            "request": "launch",
+            "command": "pnpm run build && git add . && git commit -m \"${input:commitMessage}\" && git push",
+            "preLaunchTask": "",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            }
+        }
+    ],
+    "inputs": [
+        {
+            "id": "commitMessage",
+            "type": "promptString",
+            "description": "Commit message",
+            "default": "Update website"
+        }
+    ]
+}

@@ -7,7 +7,7 @@
 </script>
 
 <svelte:head>
-    <title>{m.gdpr_h1()} - {m.brand_label()}</title>
+    <title>{m.gdrp_h1()} - {m.brand_label()}</title>
 </svelte:head>
 
 <div class="gdpr-page">

@@ -23,7 +23,7 @@
             <h1 class="page-title">{m.aml_title()}</h1>
         </div>
         
-        <section class="content-section intro-section">
+        <section class="content-section">
             <div class="section-badge">01</div>
             <h2>{m.aml_intro_title()}</h2>
             <p class="lead-text">{m.aml_intro_text()}</p>
@@ -153,21 +153,13 @@
         margin-bottom: 4rem;
         position: relative;
         padding-left: 4rem;
-    }
-    
-    .intro-section {
-        background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
-        padding: 3rem 3rem 3rem 5rem;
-        margin-left: -4rem;
-        margin-right: -4rem;
-        margin-bottom: 5rem;
-        border-left: 4px solid #1e3a5f;
+        min-height: 100px;
     }
     
     .section-badge {
         position: absolute;
         left: 0;
-        top: 0;
+        top: 0.25rem;
         width: 45px;
         height: 45px;
         background: white;

@@ -5,28 +5,69 @@
     export const prerender = true;
     export const ssr = true;
     
-    const web3form_access_key = "73d78c94-3f13-49e8-bc8e-82d53afc1a1a";
     let status = '';
     
     const handleSubmit = async (event: Event) => {
         event.preventDefault();
         status = 'Odesílám...';
-        const formData = new FormData(event.currentTarget as HTMLFormElement);
-        const object = Object.fromEntries(formData);
-        const json = JSON.stringify(object);
+        
+        const form = event.currentTarget as HTMLFormElement;
+        const formData = new FormData(form);
+        
+        // Nastavení příjemce podle prostředí (dev vs produkce)
+        const recipientEmail = import.meta.env.DEV 
+            ? 'pavel.muzik@evalytics.cz' 
+            : 'irena@muzikova.com';
+        
+        // Převod dat formuláře na formát požadovaný AWS API
+        const fields = [
+            {
+                rank: 0,
+                property: "recipientEmail",
+                value: recipientEmail
+            },
+            {
+                rank: 1,
+                property: "name",
+                label: m.sec_contact_form_name(),
+                value: formData.get('name') as string
+            },
+            {
+                rank: 2,
+                property: "email",
+                label: m.sec_contact_form_email(),
+                value: formData.get('email') as string
+            },
+            {
+                rank: 3,
+                property: "phone",
+                label: m.sec_contact_form_phone(),
+                value: formData.get('phone') as string || '-'
+            },
+            {
+                rank: 4,
+                property: "message",
+                label: m.sec_contact_form_message(),
+                value: formData.get('message') as string
+            }
+        ];
+        
+        const requestBody = {
+            fields: fields
+        };
     
-        const response = await fetch("https://api.web3forms.com/submit", {
+        const response = await fetch("https://5dsrywp9e5.execute-api.eu-central-1.amazonaws.com/submit", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
                 Accept: "application/json",
             },
-            body: json
+            body: JSON.stringify(requestBody)
         });
         const result = await response.json();      
         if (result.success) {          
             status = 'Zpráva byla úspěšně odeslána!';
-            (event.currentTarget as HTMLFormElement).reset();
+            form.reset();
         } else {
             status = 'Chyba při odesílání zprávy';
         }
@@ -57,50 +98,6 @@
                 </div>
             </div>
         </div>
-    </div>
-</section>
-
-<!-- About Section -->
-<section id={m.navbar_about_ref()} class="about-section">
-    <div class="container">
-        <h2 class="section-title">{m.about_title()}</h2>
-        <p class="section-subtitle">{m.about_subtitle()}</p>
-        
-        <div class="about-content">
-            <div class="about-card">
-                <div class="icon-wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
-                    </svg>
-                </div>
-                <h3 class="card-title">{m.about_edu_title()}</h3>
-                <ul class="about-list">
-                    <li>{m.about_edu_1()}</li>
-                    <li>{m.about_edu_2()}</li>
-                </ul>
-            </div>
-            
-            <div class="about-card">
-                <div class="icon-wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 00.75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 00-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0112 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 01-.673-.38m0 0A2.18 2.18 0 013 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 013.413-.387m7.5 0V5.25A2.25 2.25 0 0013.5 3h-3a2.25 2.25 0 00-2.25 2.25v.894m7.5 0a48.667 48.667 0 00-7.5 0M12 12.75h.008v.008H12v-.008z" />
-                    </svg>
-                </div>
-                <h3 class="card-title">{m.about_career_title()}</h3>
-                <ul class="about-list">
-                    <li>{m.about_career_1()}</li>
-                    <li>{m.about_career_2()}</li>
-                    <li>{m.about_career_3()}</li>
-                    <li>{m.about_career_4()}</li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="about-photo-section">
-            <img src="{base}/images/Irena_24_02_25_123b.jpg" alt="Irena Mužíková" class="about-photo" />
-        </div>
-        
-        <p class="about-description">{m.about_description()}</p>
     </div>
 </section>
 
@@ -165,6 +162,64 @@
                 </ul>
             </div>
         </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id={m.navbar_about_ref()} class="about-section">
+    <div class="container">
+        <h2 class="section-title">{m.about_title()}</h2>
+        <p class="section-subtitle">{m.about_subtitle()}</p>
+        
+        <div class="about-content">
+            <div class="about-card">
+                <div class="icon-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
+                    </svg>
+                </div>
+                <h3 class="card-title">{m.about_edu_title()}</h3>
+                <ul class="about-list">
+                    <li>{m.about_edu_1()}</li>
+                    <li>{m.about_edu_2()}</li>
+                    <li>{m.about_edu_3()}</li>
+                </ul>
+            </div>
+            
+            <div class="about-card">
+                <div class="icon-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 00.75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 00-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0112 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 01-.673-.38m0 0A2.18 2.18 0 013 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 013.413-.387m7.5 0V5.25A2.25 2.25 0 0013.5 3h-3a2.25 2.25 0 00-2.25 2.25v.894m7.5 0a48.667 48.667 0 00-7.5 0M12 12.75h.008v.008H12v-.008z" />
+                    </svg>
+                </div>
+                <h3 class="card-title">{m.about_career_title()}</h3>
+                <ul class="about-list">
+                    <li>{m.about_career_1()}</li>
+                    <li>{m.about_career_2()}</li>
+                    <li>{m.about_career_3()}</li>
+                    <li>{m.about_career_4()}</li>
+                </ul>
+            </div>
+            
+            <div class="about-card">
+                <div class="icon-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 21l5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 016-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 01-3.827-5.802" />
+                    </svg>
+                </div>
+                <h3 class="card-title">{m.about_languages_title()}</h3>
+                <ul class="about-list">
+                    <li>{m.about_languages_1()}</li>
+                    <li>{m.about_languages_2()}</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="about-photo-section">
+            <img src="{base}/images/Irena_24_02_25_123b.jpg" alt="Irena Mužíková" class="about-photo" />
+        </div>
+        
+        <p class="about-description">{m.about_description()}</p>
     </div>
 </section>
 
@@ -239,8 +294,6 @@
             
             <div class="contact-form-wrapper">
                 <form on:submit={handleSubmit} class="contact-form">
-                    <input type="hidden" name="access_key" value={web3form_access_key} />
-                    
                     <div class="form-group">
                         <label for="name">{m.sec_contact_form_name()}</label>
                         <input 
@@ -886,7 +939,7 @@
         border-radius: 0;
         background: #2f4f4f;
         color: white;
-        margin: 0;
+        margin: 1rem 0 0 0;
         font-family: 'Crimson Text', sans-serif;
     }
     
