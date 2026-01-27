@@ -971,7 +971,11 @@
         }
         
         .hero-section {
-            padding: 4rem 1rem 4rem;
+            padding: 4rem 0 4rem;
+        }
+        
+        .hero-text {
+            padding: 0 1rem;
         }
         
         .hero-title {
@@ -984,6 +988,14 @@
         
         .hero-role-text {
             font-size: 1.8rem;
+        }
+        
+        .profile-img-wrapper {
+            width: 100vw;
+            height: 70vh;
+            margin: 2rem 0 0 0;
+            border-radius: 0;
+            box-shadow: none;
         }
         
         .services-grid,
