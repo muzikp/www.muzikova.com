@@ -148,19 +148,19 @@
     
     @media (max-width: 768px) {
         .gdpr-page {
-            padding: 5rem 2rem;
+            padding: 3rem 0.5rem;
         }
         
         .container {
-            padding: 2.5rem 1.5rem;
+            padding: 2rem 1rem;
         }
         
         .page-title {
-            font-size: 2.2rem;
+            font-size: 1.5rem;
         }
         
         .gdpr-section h2 {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
         }
     }
 </style>

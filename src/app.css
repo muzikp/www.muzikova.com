@@ -36,4 +36,6 @@ nav {
 body {    
     font-family: 'Bitter Variable', serif;
     background-color:var(--bg);
+    max-width: 100vw;
+    overflow-x: hidden;
 }

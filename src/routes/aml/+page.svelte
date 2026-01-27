@@ -308,15 +308,15 @@
     
     @media (max-width: 768px) {
         .page-wrapper {
-            padding: 4rem 1.5rem 6rem;
+            padding: 3rem 0.5rem 4rem;
         }
         
         .container {
-            padding: 3rem 2rem;
+            padding: 2rem 1rem;
         }
         
         .page-title {
-            font-size: 2rem;
+            font-size: 1.5rem;
         }
         
         .content-section {
@@ -325,20 +325,20 @@
         
         .intro-section,
         .contact-box {
-            margin-left: -2rem;
-            margin-right: -2rem;
-            padding-left: 4rem;
-            padding-right: 2rem;
+            margin-left: -1rem;
+            margin-right: -1rem;
+            padding-left: 3.5rem;
+            padding-right: 1rem;
         }
         
         .section-badge {
-            width: 40px;
-            height: 40px;
-            font-size: 0.85rem;
+            width: 35px;
+            height: 35px;
+            font-size: 0.8rem;
         }
         
         .content-section h2 {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
         }
     }
 </style>

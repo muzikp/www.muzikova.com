@@ -967,23 +967,23 @@
         .about-content,
         .contact-content {
             grid-template-columns: 1fr;
-            gap: 3rem;
+            gap: 2rem;
         }
         
         .hero-section {
-            padding: 5rem 2rem 6rem;
+            padding: 4rem 1rem 4rem;
         }
         
         .hero-title {
-            font-size: 2.5rem;
+            font-size: 1.8rem;
         }
         
         .hero-name {
-            font-size: 2.5rem;
+            font-size: 1.8rem;
         }
         
         .hero-role-text {
-            font-size: 2.5rem;
+            font-size: 1.8rem;
         }
         
         .services-grid,
@@ -992,14 +992,32 @@
         }
         
         .section-title {
-            font-size: 2.2rem;
+            font-size: 1.8rem;
         }
         
         .about-section,
         .services-section,
         .references-section,
         .contact-section {
-            padding: 5rem 2rem;
+            padding: 4rem 1rem;
+        }
+        
+        .service-card,
+        .about-card {
+            padding: 1.5rem;
+        }
+        
+        .service-title,
+        .card-title {
+            font-size: 1.3rem;
+        }
+        
+        h2 {
+            font-size: 1.5rem;
+        }
+        
+        h3 {
+            font-size: 1.2rem;
         }
     }
 </style>
