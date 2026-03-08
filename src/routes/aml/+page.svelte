@@ -207,36 +207,6 @@
         font-weight: 300;
     }
     
-    .styled-list {
-        list-style: none;
-        padding: 0;
-        margin: 2rem 0;
-    }
-    
-    .styled-list li {
-        padding: 1rem 0;
-        color: #4b5563;
-        font-family: 'Crimson Text', -apple-system, sans-serif;
-        font-size: 0.95rem;
-        font-weight: 300;
-        line-height: 1.8;
-        border-bottom: 1px solid rgba(30, 58, 95, 0.08);
-        display: flex;
-        align-items: start;
-        gap: 1rem;
-    }
-    
-    .styled-list li:last-child {
-        border-bottom: none;
-    }
-    
-    .list-marker {
-        color: #1e3a5f;
-        font-weight: 400;
-        flex-shrink: 0;
-        margin-top: 0.1rem;
-    }
-    
     .inline-link {
         color: #1e3a5f;
         text-decoration: none;
