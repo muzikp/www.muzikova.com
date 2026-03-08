@@ -2,8 +2,6 @@
     import '../app.css';
     import * as m from '$lib/paraglide/messages.js';
     import { base } from '$app/paths';
-    export const prerender = true;
-    export const ssr = true;
     
     let status = '';
     
@@ -410,6 +408,13 @@
         align-items: center;
         position: relative;
         z-index: 1;
+    }
+
+    /* Photo on the left, text on the right */
+    @media (min-width: 769px) {
+        .hero-image {
+            order: -1;
+        }
     }
     
     .hero-title {
@@ -972,22 +977,28 @@
         
         .hero-section {
             padding: 4rem 0 0 0;
+            max-width: 100vw;
+            overflow-x: hidden;
         }
         
         .hero-text {
-            padding: 0 1rem 2rem 1rem;
+            padding: 0 0.5rem 1.5rem 0.5rem;
         }
         
         .hero-title {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
         }
         
         .hero-name {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
         }
         
         .hero-role-text {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1rem;
         }
         
         .profile-card {
@@ -1008,32 +1019,48 @@
         }
         
         .section-title {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
+        }
+
+        .section-subtitle {
+            font-size: 0.95rem;
+            margin-bottom: 3rem;
         }
         
         .about-section,
         .services-section,
         .references-section,
-        .contact-section {
-            padding: 4rem 1rem;
+        .contact-section,
+        .partners-section {
+            padding: 3rem 0.5rem;
         }
         
         .service-card,
         .about-card {
-            padding: 1.5rem;
+            padding: 1.25rem;
         }
         
         .service-title,
         .card-title {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
         }
         
         h2 {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
         }
         
         h3 {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
+        }
+
+        .container {
+            max-width: 100%;
+            padding: 0 0.5rem;
+            box-sizing: border-box;
+        }
+
+        .contact-form-wrapper {
+            padding: 1.5rem 0.75rem;
         }
     }
 </style>

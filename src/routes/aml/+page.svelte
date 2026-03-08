@@ -1,9 +1,6 @@
 <script lang="ts">
     import '../../app.css';
     import * as m from '$lib/paraglide/messages.js';
-    import { base } from '$app/paths';
-    export const prerender = true;
-    export const ssr = true;
 </script>
 
 <svelte:head>
@@ -22,44 +19,49 @@
             </div>
             <h1 class="page-title">{m.aml_title()}</h1>
         </div>
-        
+
+        <p class="lead-text intro-paragraph">{m.aml_intro_text()}</p>
+
         <section class="content-section">
             <div class="section-badge">01</div>
-            <h2>{m.aml_intro_title()}</h2>
-            <p class="lead-text">{m.aml_intro_text()}</p>
+            <h2>{m.aml_s1_title()}</h2>
+            <p>{m.aml_s1_text()}</p>
         </section>
 
         <section class="content-section">
             <div class="section-badge">02</div>
-            <h2>{m.aml_id_title()}</h2>
-            <p>{m.aml_id_text()}</p>
-            <ul class="styled-list">
-                <li><span class="list-marker">→</span>{m.aml_id_1()}</li>
-                <li><span class="list-marker">→</span>{m.aml_id_2()}</li>
-                <li><span class="list-marker">→</span>{m.aml_id_3()}</li>
-                <li><span class="list-marker">→</span>{m.aml_id_4()}</li>
-            </ul>
+            <h2>{m.aml_s2_title()}</h2>
+            <p>{m.aml_s2_text()}</p>
         </section>
 
         <section class="content-section">
             <div class="section-badge">03</div>
-            <h2>{m.aml_docs_title()}</h2>
-            <p>{m.aml_docs_text()}</p>
+            <h2>{m.aml_s3_title()}</h2>
+            <p>{m.aml_s3_text()}</p>
         </section>
 
         <section class="content-section">
             <div class="section-badge">04</div>
-            <h2>{m.aml_report_title()}</h2>
-            <p>{m.aml_report_text()}</p>
+            <h2>{m.aml_s4_title()}</h2>
+            <p>{m.aml_s4_text()}</p>
         </section>
 
         <section class="content-section">
             <div class="section-badge">05</div>
-            <h2>{m.aml_gdpr_title()}</h2>
-            <p>
-                {m.aml_gdpr_text_1()}
-                <a href="{base}/gdpr" class="inline-link">{m.aml_gdpr_link()}</a>.
-            </p>
+            <h2>{m.aml_s5_title()}</h2>
+            <p>{m.aml_s5_text()}</p>
+        </section>
+
+        <section class="content-section">
+            <div class="section-badge">06</div>
+            <h2>{m.aml_s6_title()}</h2>
+            <p>{m.aml_s6_text()}</p>
+        </section>
+
+        <section class="content-section">
+            <div class="section-badge">07</div>
+            <h2>{m.aml_s7_title()}</h2>
+            <p>{m.aml_s7_text()}</p>
         </section>
 
         <section class="content-section contact-box">
@@ -188,6 +190,13 @@
         line-height: 2;
         color: #2c3e50;
     }
+
+    .intro-paragraph {
+        margin: 0 0 4rem 0;
+        padding: 2rem;
+        border-left: 3px solid #1e3a5f;
+        background: #f8fafc;
+    }
     
     .content-section p {
         color: #4b5563;
@@ -308,27 +317,33 @@
     
     @media (max-width: 768px) {
         .page-wrapper {
-            padding: 3rem 0.5rem 4rem;
+            padding: 2rem 0 3rem;
+            overflow-x: hidden;
         }
         
         .container {
-            padding: 2rem 1rem;
+            padding: 1.5rem 0.75rem;
+            max-width: 100%;
+            box-sizing: border-box;
         }
         
         .page-title {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
+        }
+        
+        .page-header {
+            margin-bottom: 2.5rem;
+            padding-bottom: 2rem;
         }
         
         .content-section {
             padding-left: 3rem;
         }
         
-        .intro-section,
         .contact-box {
-            margin-left: -1rem;
-            margin-right: -1rem;
-            padding-left: 3.5rem;
-            padding-right: 1rem;
+            margin-left: 0;
+            margin-right: 0;
+            padding: 1.5rem 1rem 1.5rem 3.5rem;
         }
         
         .section-badge {
@@ -338,7 +353,7 @@
         }
         
         .content-section h2 {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
         }
     }
 </style>

@@ -11,8 +11,6 @@
 	import { page } from '$app/stores';
 	
 	let { children } = $props();
-	export const prerender = true;
-	export const ssr = true;
 
 	onMount(() => {
 		CookieConsent.run(config);

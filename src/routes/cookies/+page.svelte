@@ -1,8 +1,6 @@
 <script lang="ts">
     import '../../app.css';
     import * as m from '$lib/paraglide/messages.js';
-    export const prerender = true;
-    export const ssr = true;
 </script>
 
 <svelte:head>
@@ -393,27 +391,28 @@
     
     @media (max-width: 768px) {
         .page-wrapper {
-            padding: 3rem 0.5rem 4rem;
+            padding: 2rem 0 3rem;
+            overflow-x: hidden;
         }
         
         .container {
-            padding: 2rem 1rem;
+            padding: 1.5rem 0.75rem;
+            max-width: 100%;
+            box-sizing: border-box;
         }
         
         .page-title {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
         }
         
         .content-section {
             padding-left: 3rem;
         }
         
-        .intro-section,
         .contact-box {
-            margin-left: -1rem;
-            margin-right: -1rem;
-            padding-left: 3.5rem;
-            padding-right: 1rem;
+            margin-left: 0;
+            margin-right: 0;
+            padding: 1.5rem 1rem 1.5rem 3.5rem;
         }
         
         .section-badge {
@@ -423,7 +422,7 @@
         }
         
         .content-section h2 {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
         }
         
         .browser-links {

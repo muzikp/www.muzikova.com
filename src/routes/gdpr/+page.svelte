@@ -2,8 +2,6 @@
     import '../../app.css';    
     import * as m from '$lib/paraglide/messages.js';    
     import List from "../../components/ul-li.svelte";
-    export const prerender = true;
-    export const ssr = true;    
 </script>
 
 <svelte:head>
@@ -148,19 +146,22 @@
     
     @media (max-width: 768px) {
         .gdpr-page {
-            padding: 3rem 0.5rem;
+            padding: 2rem 0 3rem;
+            overflow-x: hidden;
         }
         
         .container {
-            padding: 2rem 1rem;
+            padding: 1.5rem 0.75rem;
+            max-width: 100%;
+            box-sizing: border-box;
         }
         
         .page-title {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
         }
         
         .gdpr-section h2 {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
         }
     }
 </style>
